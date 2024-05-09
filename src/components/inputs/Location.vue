@@ -2,7 +2,7 @@
 .relative.inline-block.cursor-pointer
     .input-wrapper(:class='{ "border-error": errorMessage }' class="border-transparent" @click="showModal = true")
             .label.text-xs.mb-0.leading-3( :for='name') {{label}}
-            input.font-medium.text-sm.w-full( :placeholder="placeholder"  v-model='inputValue'   :name='name')
+            input.font-medium.text-sm.w-full( :placeholder="placeholder" class='w-[90%] ' readonly=''   v-model='inputValue'   :name='name')
     p.text-xs.text-error {{ errorMessage }}
     IconsLocation( class=' mr-1 ml-2  absolute right-4  top-3' )
 
