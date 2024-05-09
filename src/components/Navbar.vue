@@ -23,7 +23,7 @@
             p.font-medium Khuzimah A.
             p.text-xs Cabrio Co.
       .profile-icon 
-          IconsArrowDown.cursor-pointer.trasnition(:class="{ 'transform rotate-180': isOpen } "  )
+          IconsArrowDown.cursor-pointer.trasnition(:class="{ 'transform rotate-180': isOpen } " @click="isOpen = !isOpen"  )
 
       transition(name='slide')
         ul.absolute.mt-2.w-full.rounded-lg.shadow-lg.bg-white.ring-1.ring-black.ring-opacity-5.top-14.py-3( class='z-[100]' v-if='isOpen' @click='closeDropdown')
