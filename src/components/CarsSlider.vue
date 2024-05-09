@@ -1,7 +1,7 @@
 <template lang="pug">
 div
     p.absolute.z-20.text-xl.font-medium Select car class
-    swiper.mySwiper(   :breakpoints="{ '640': {  slidesPerView: 1 },  '768': { slidesPerView:2.2 } }"  :spaceBetween='14'  :pagination='{clickable: true}' :navigation="true" :modules='modules' )
+    swiper.mySwiper(   :breakpoints="{ '640': {  slidesPerView: 1 },  '768': { slidesPerView:2.2 } }"  :spaceBetween='2'  :pagination='{clickable: true}' :navigation="true" :modules='modules' )
             swiper-slide(v-for='(car, index) in cars' :key='index' @click='selectOrUnSelect(car)' )
                 .pt-5.py-2
                     Card( :selected="car?.id ===selectedCar?.id"  :class='car.class' :model='car.model' :passengers='car.passengers' :laggage='car.laggage' :price='car.price')
@@ -112,6 +112,7 @@ const {
 } */
 .swiper-slide {
   background: #fff;
+  @apply px-1;
 }
 
 .swiper-slide img {
