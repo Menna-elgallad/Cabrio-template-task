@@ -1,0 +1,78 @@
+@import url('https://fonts.cdnfonts.com/css/outfit');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .shadow-custom {
+    --tw-shadow: 0 0 0px 3px rgba(0, 0, 0, 1);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+}
+
+.border-error{
+  border-color: #ff6f60 !important;
+
+}
+input::placeholder{
+  font-weight: 400 !important;
+  font-size: smaller;
+}
+@layer{
+  .input-wrapper { 
+    @apply leading-3 w-full px-4 pb-1 pt-2 !border-solid !border-2 bg-info text-sm text-gray-700 rounded-lg    hover:!border-black focus-within:!border-black !transition 
+  }
+}
+
+*{
+  box-sizing: border-box  ;
+  font-family: 'Outfit', sans-serif;
+}
+.route {
+  @apply text-white relative;
+  transition: all 0.4s ease-in-out;
+  text-shadow: -0.25px -0.25px 0 transparent, 0.25px 0.25px transparent;
+}
+.route:hover {
+  text-shadow: -0.25px -0.25px 0 rgb(255, 255, 255),
+    0.25px 0.25px rgb(255, 255, 255);
+}
+.route::after {
+  @apply absolute  w-[5px] h-[5px] bg-white rounded;
+  content: "";
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+}
+.route:hover::after {
+  opacity: 1;
+}
+input{
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-enter-from {
+  transform: translateY(-3%);
+  opacity: 0;
+}
+
+.slide-enter-to,
+.slide-leave-from {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-leave-to {
+  transform: translateY(-3%);
+  opacity: 0;
+}
