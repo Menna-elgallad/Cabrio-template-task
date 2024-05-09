@@ -6,8 +6,8 @@
   IconsArrowDown.cursor-pointer(:class="{ 'transform rotate-180': isOpen } " class=' mr-1 ml-2  absolute right-4 mt-2 top-2' color="black")
   p.text-xs.text-error {{ errorMessage }}
   transition(name='slide')
-    ul.absolute.mt-2.w-full.rounded-lg.shadow-lg.bg-white.ring-1.ring-black.px-2.ring-opacity-5.py-3( class='z-[100]' v-if='isOpen' @click='closeDropdown')
-      li.cursor-pointer.select-none.relative.py-2.pl-3.pr-9.rounded-md.mb-1(class="transition hover:bg-black hover:text-white"  :class="{ 'bg-black text-white': option.value === inputValue }" v-for='option in options' :key='option.value' @click='selectItem(option.value, option.label)')
+    ul.absolute.mt-2.w-full.rounded-lg.bg-white.py-3.dropdown-shadow( class='z-[100] px-2' v-if='isOpen' @click='closeDropdown')
+      li.cursor-pointer.select-none.relative.py-3.pl-3.pr-9.rounded-md.mb-1(class="transition hover:bg-black hover:text-white"  :class="{ 'bg-black text-white': option.value === inputValue }" v-for='option in options' :key='option.value' @click='selectItem(option.value, option.label)')
         span.block.truncate.text-sm(:class="{ 'font-semibold': option.value === inputValue && !option.description }") {{ option.label }}
         span.block.truncate.text-xs(v-if="option.description") {{ option.description }}
       

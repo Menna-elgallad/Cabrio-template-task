@@ -27,18 +27,18 @@
 
       transition(name='slide')
         ul.absolute.mt-2.w-full.rounded-lg.shadow-lg.bg-white.ring-1.ring-black.ring-opacity-5.top-14.py-3( class='z-[100]' v-if='isOpen' @click='closeDropdown')
-          div.py-4.font-medium.border-b.pl-3( class="hover:border-b-black transition cursor-pointer " @click='closeDropdown'  )
+          div.py-4.font-medium.border-b.ml-3( class="hover:border-b-black transition cursor-pointer " @click='closeDropdown'  )
               .flex.justify-between
                   .flex.gap-4
                       IconSettings
                       p.text-black Profile Settings
-          div.py-4.font-medium.pl-3( class="border-b border-b-transparent hover:!border-b-black cursor-pointer    " @click='closeDropdown'  )
+          div.py-4.font-medium.pl-3( class="cursor-pointer    " @click='closeDropdown'  )
               .flex.justify-between
                   .flex.gap-4
                       IconLang
                       p.text-black العربية
           .px-3
-               button.bg-white.font-semibold.w-full.text-black.px-4.py-2.rounded-lg.mt-4.border-2.border-black( @click='closeDropdown'    class="transition hover:opacity-60" ) Logout
+               button.bg-white.font-semibold.w-full.text-black.px-4.py-2.rounded-lg.border-2.border-black( @click='closeDropdown'    class="transition hover:opacity-60" ) Logout
   .mobile-menu(:class='[openMenu ? "!opacity-100 !z-50" : "!opacity-0 !z-[-1]"]' ) 
     MobileMenu(@close="openMenu = false")
 
@@ -87,7 +87,8 @@ const closeDropdown = () => {
   @apply flex  items-center gap-3;
 }
 .mobile-menu {
-  @apply hidden fixed  transition-all w-[100vw]  h-[100vh] top-0 left-0;
+  @apply hidden fixed   w-[100vw]  h-[100vh] top-0 left-0;
+  transition: all 0.5s ease-in-out;
 }
 @media screen and (max-width: 960px) {
   .nav {

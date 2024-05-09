@@ -12,6 +12,8 @@
 
 }
 
+
+
 .border-error{
   border-color: #ff6f60 !important;
 
@@ -24,6 +26,11 @@ input::placeholder{
   .input-wrapper { 
     @apply leading-3 w-full px-4 pb-1 pt-2 !border-solid !border-2 bg-info text-sm text-gray-700 rounded-lg    hover:!border-black focus-within:!border-black !transition 
   }
+
+}
+
+.dropdown-shadow { 
+  box-shadow: 0px 0px 20px 4px rgba(191, 191, 191, 0.25);
 }
 
 *{

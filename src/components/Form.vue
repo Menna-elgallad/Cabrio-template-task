@@ -19,8 +19,8 @@ div
                 InputDate.w-full(label="Trip Date" name="date")
             .w-full(class="md:px-5 px-3") 
                 InputText.w-full(  placeholder="Enter flight number" label="Flight number" name="flightNumber")
-            
-            CarsSlider.mt-3(label="Select Car" name="car")
+            .w-full(class="md:px-5 px-3") 
+              CarsSlider.mt-3(label="Select Car" name="car")
             .w-full(class="md:px-5 px-3") 
                 .flex.justify-end.w-full.mb-3        
                     p.text-sm.opacity-50 Fees
@@ -224,6 +224,7 @@ const requiredInputs = [
   "car",
   "name",
   "mobile",
+  "flightNumber",
 ];
 const invalidSubmit = (val) => {
   console.log(val);
